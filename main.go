@@ -16,7 +16,7 @@ func main() {
 
 	api := slack.New(os.Getenv("SLACK_BOT_TOKEN"))
 	preText := "*Github Updates posted!*"
-	jenkinsURL := "*Build URL:*" + args[0]
+	githubURL := "*Build URL:*" + args[0]
 	buildResult := "*" + args[1] + "*"
 	buildNumber := "*" + args[2] + "*"
 	jobName := "*" + args[3] + "*"
@@ -28,7 +28,7 @@ func main() {
 	}
 
 	dividerSection1 := slack.NewDividerBlock()
-	jenkinsBuildDetails := jobName + " #" + buildNumber + " - " + buildResult + "\n" + jenkinsURL
+	jenkinsBuildDetails := jobName + " #" + buildNumber + " - " + buildResult + "\n" + githubURL
 	preTextField := slack.NewTextBlockObject("mrkdwn", preText+"\n\n", false, false)
 	jenkinsBuildDetailsField := slack.NewTextBlockObject("mrkdwn", jenkinsBuildDetails, false, false)
 

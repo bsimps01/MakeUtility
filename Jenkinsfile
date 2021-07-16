@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Checkout Codebase'){
             steps{
-                checkout scm: [$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[credentialsId: 'MakeUtility', url: 'git@github.com/bsimps01/MakeUtility.git']]] 
+                checkout scm: [$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[credentialsId: 'MakeUtility', url: 'github.com/bsimps01/MakeUtility']]] 
             }
         }
 
