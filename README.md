@@ -2,11 +2,32 @@
 
 ## Table of Contents
 
-1. [Table of Contents](#table-of-contents)
-2. [Scenario](#scenario)
-3. [Project Guidelines](#project-guidelines)
-4. [Rubric](#rubric)
-5. [Code Review and Feedback](#code-review-and-feedback)
+[![Go Report Card](https://goreportcard.com/badge/github.com/bsimps01/MakeUtility)](https://goreportcard.com/report/github.com/bsimps01/MakeUtility)
+
+### Description
+Need help with getting notified when your teammate pushes their code to github? Anytime you push to github you follow the commands below and the following message will appear from your slackbot! */Get your own Slackbot token through the Slack API/*
+
+    ```bash
+    $ cd MakeUtility
+    $ go build
+    $ go run main.go
+    ```
+
+![image][Github_slack.png]
+
+## How to install
+
+- Run each command line-by-line in your terminal to set up the project:
+
+    ```bash
+    $ git clone https://github.com/bsimps01/MakeUtility.git
+    $ cd MakeUtility
+    $ git remote rm origin
+    $ git remote add origin https://github.com/YOUR_GITHUB_NAME/MakeUtility.git
+    $ go mod download
+    $ go get -u github.com/slack-go/slack
+    $ go get -u github.com/joho/godotenv 
+    ```
 
 ## Scenario
 
