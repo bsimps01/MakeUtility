@@ -13,7 +13,7 @@ Need help with getting notified when your teammate pushes their code to github? 
     $ go run main.go
     ```
 
-![image][Github_slack.png]
+![alt text][https://github.com/bsimps01/MakeUtility/blob/main/Github_slack.png]
 
 ## How to install
 
