@@ -9,12 +9,21 @@ import (
 )
 
 func main() {
-	godotenv.Load()
 
 	args := os.Args[1:]
 	fmt.Println(args)
-
+	godotenv.Load()
 	api := slack.New(os.Getenv("SLACK_BOT_TOKEN"))
+	// channelID, timestamp, err := api.PostMessage(
+	// 	"C028YGHJH6U",
+	// 	slack.MsgOptionText("*GITHUB UPDATES POSTED!* find the repo at: https://github.com/bsimps01/MakeUtility", false),
+	// )
+
+	// if err != nil {
+	// 	fmt.Printf("%s\n", err)
+	// 	return
+	// }
+	// fmt.Printf("Message successfully sent to channel %s at %s", channelID, timestamp)
 	preText := "*Github Updates posted!*"
 	githubURL := "*Build URL:*" + args[0]
 	buildResult := "*" + args[1] + "*"
